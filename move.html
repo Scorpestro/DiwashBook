@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixo.tv</title>
+    <link rel="icon" href="image/logo/mixo/mixo_3.ico">
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet"/>
+    <link href="css/video-js-upnext.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.3/css/all.mins.css" intergity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/" gI1w=="crossorigin= anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Valera+round&display=swap" rel="stylesheet">
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/noscript">
+    </noscript> 
+    <link rel="stylesheet" href="https://unpkg.com/video-js-overlay-button@latest/dist/video-js-overlay-buttons.css" />
+    <title> Mixio.tv</title>
+</head>
+<style type="text/css">
+    *::-webkit-scrollbar-track {
+    background-color: transparent;
+    }
+    *::-webkit-scrollbar{
+        width: 5px;
+        background-color: transparent;
+    }
+    *::-webkit-scrollbar-thumb{
+        background-color:#cccccc;
+        border-radius: 15px;
+    }
+    body,
+    html {
+        margin:0;
+        padding:0;
+        font-family: 'Varela Round' sans-serif;
+        overflow: hidden;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    *:focus{
+        outline:none;
+    }
+    body{
+        height:100vh;
+    }
+    .backdrop-blur{
+    background-color: rgba(255,255,255,.6);
+    }
+    .fa.custom-fa{
+        -webkit-text-stroke-color:white;
+        color: transparent;
+    }  
+    /* if backdrop support: very transparent and blurred */
+    @supports ((webkit-backdrop-filter:blur(20px)) or (backdrop-filter: blur(20px))) {
+        .backdrop-black{
+        background-color: rgba(0,0,0,0);
+        }
+        .backdrop-blur{
+        background-color: rgba(255,255,255,0);
+        -webkit-backdrop-filter:blur(20px);
+        backdrop-filter: blur(20px);
+        }
+        }
+        .videoplayed{
+            position: absolute;
+            left: 22px;
+            background-color: white;
+            width:75%;
+            height: 3px;
+            max-width: 74.24%;
+
+        }
+        /*video player*/
+        .videoMixio{
+            -- videoMixio--primary: #fff;
+            -- videMixio--secondary:#cccccc;
+        }
+        .videoMixio{
+            width:100vw;
+            height:100vh;
+        }
+        .videoMixio .vjs-volume-panel {
+            display: none!;
+        }
+        .videoMixio .vjs-picture-in-picture-control{
+            display: none !important;
+        }
+        .videoMixio . vjs-poster{
+            width:100vw;
+            height: 100vh;
+            background-size:cover;
+            background-position: center;
+        }
+        .videoMixio .vjs-big-play-button{
+            width: 70px;
+            height: 70px;
+            background-color: none;
+            line-height: 70px;
+            font-size: 80px;
+            border:none;
+            top:50%;
+            left:50%;
+            margin-top: -35px;
+            margin-left: -35px;
+            color:var(--videoMixio--primary)
+        }
+        .videoMixio.vjs-big-play-button,
+        .videoMixio:hover .vjs-big-play-button{
+            background-color: tranparent;
+            color:#fff;
+        }
+        .videoMixio .topcontainer{
+            display: flex;
+            justify-content: space-between;
+            width :calc(100% -20px);
+            height: 20px;
+            margin: 10px 10px 0px 10px;
+        }
+        .videoMixio .topcontainer .vjs-progress-holder{
+            border-radius: 35px 0px 0px 35px;
+            margin-top: 21px;
+            width: 100px;
+            height: 3px;
+            background-color: #cccccc;
+            cursor: pointer;
+
+        }
+        @-webkit-keyframes scale{
+            0%{
+                -webkit-keyframes scale(0);
+            }
+            50%{
+                -webkit-transform: scale(1);
+            }
+            }
+            @-webkit-keyframes glow{
+                from{
+                    text-shadow: 0 0 10px #fff, 0 0 30px #7f0elf; 0, 0 50 px #7f0elf, 0 0 60px #70px #7f0elf;
+                                }
+                             to            {
+                                text-shadow: 0 0 20px #fff, 0 0 30px #b4142c, 0 0 40px #b4142c, 0 0 60px #b4142c, 0 0 70px #b4142c, 0 0 80px #b4142c;
+                                         }
+                        }
+                        .videoMixio. .topcontainer .vjs-remaining-time{
+                            padding-left: 10px;
+                            color:white;
+                            font-family: 'Varela Round', sans-serif;
+                            cursor:default;
+                            font-size: 15px;
+                        }
+                        .videoMixio .Songinfo{
+                            padding-top:8px;
+                            padding-left: 10px;
+                            width:50%
+                            color: white
+                            white-space:nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-family: 'Varela Round', sans-serif;
+                            cursor: pointer;
+                
+                        }
+                        @-webkit-keyframes scale {
+                            0%{
+                                -webkit-transform: scale(0);
+            
+                            }
+                            %50{
+                                -webkit-transform: scale(1);
+                            }
+                            }
+                            @-webkit-keyframes glow{
+                                from{
+                                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px , 0 0 40px #7f0elf, 0 0 60 px #7f0elf, , 0 0 70 px #7f0elf;
+                                }
+                                to {
+                                    text-shadow: 0 0 20px #fff, 0 0 30px #b4142c, 0 0 40px b4142c, 0 0 60 px #b412bc, 0 0 70px #b414
+                                }
+                                }
+                            }
+                        }
+
+                        }
+                        }
+                                }
+        }
+        .
+        }
+        }
+    }
+
+    .back     
+    }
+    }
+    }
+</style>
+<body>
+    
+</body>
+</html>
